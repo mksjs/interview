@@ -28,17 +28,17 @@ class isUnique{
 		Scanner sc =new Scanner(System.in);
 		String s = sc.next();
 		if(isUniqueChars(s)){
-			System.out.println("Unique character in the String\n");
+			System.out.println("Unique character in the String");
 		}
 		else{
-			System.out.println("Not Unique character in the String\n");
+			System.out.println("Not Unique character in the String");
 		}
 		System.out.println("Version 1");
 		if(isUniqueCharsver1(s)){
-			System.out.println("Unique character in the String\n");
+			System.out.println("Unique character in the String");
 		}
 		else{
-			System.out.println("Not Unique character in the String\n");
+			System.out.println("Not Unique character in the String");
 		}
 	}
 }
