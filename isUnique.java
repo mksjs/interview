@@ -1,6 +1,17 @@
 import java.util.*;
 
 class isUnique{
+	static boolean isUniqueCharsver1(String str){
+		int checker =0;
+		for(int i=0;i<str.length();i++){
+			int val = str.charAt(i) -'a';
+			if((checker & (1<<val)) >0){
+				return false;
+			}
+			checker |=(1<<val);
+		}
+		return true;
+	}
 	static boolean isUniqueChars(String str){
 		if(str.length() >128) return false;
 		boolean[] char_set = new boolean[128];
@@ -17,6 +28,13 @@ class isUnique{
 		Scanner sc =new Scanner(System.in);
 		String s = sc.next();
 		if(isUniqueChars(s)){
+			System.out.println("Unique character in the String\n");
+		}
+		else{
+			System.out.println("Not Unique character in the String\n");
+		}
+		System.out.println("Version 1");
+		if(isUniqueCharsver1(s)){
 			System.out.println("Unique character in the String\n");
 		}
 		else{
